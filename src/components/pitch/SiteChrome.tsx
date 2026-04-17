@@ -34,11 +34,26 @@ export function SiteNav() {
             : "bg-transparent"
         )}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 lg:px-12">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={boltLogo} alt="Bolt" className="h-7 w-auto" />
-            <span className="hidden text-xs font-semibold uppercase tracking-[0.25em] text-[var(--bolt-dark)]/60 sm:inline">
-              × Melt Media
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-3 lg:px-12">
+          <Link to="/" className="group flex items-center gap-4">
+            <span
+              className={cn(
+                "flex items-center justify-center rounded-xl px-3 py-2 transition-colors",
+                scrolled ? "bg-[var(--bolt-dark)]" : "bg-[var(--bolt-dark)]/90 backdrop-blur"
+              )}
+            >
+              <img src={boltLogo} alt="Bolt" className="h-8 w-auto md:h-10 brightness-0 invert" />
+            </span>
+            <span className="hidden items-center gap-3 sm:flex">
+              <span className="h-8 w-px bg-[var(--bolt-dark)]/20" />
+              <span className="flex flex-col leading-tight">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--bolt-dark)]/50">
+                  In partnership with
+                </span>
+                <span className="font-display text-base font-bold tracking-tight text-[var(--bolt-dark)] md:text-lg">
+                  Melt Media
+                </span>
+              </span>
             </span>
           </Link>
           <button
