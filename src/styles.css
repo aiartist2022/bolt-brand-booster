@@ -158,8 +158,40 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--bolt-cream);
+    color: var(--bolt-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--bolt-green);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .text-balance { text-wrap: balance; }
+  .bolt-grid {
+    background-image:
+      linear-gradient(to right, var(--bolt-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--bolt-line) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .bolt-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
   }
 }
