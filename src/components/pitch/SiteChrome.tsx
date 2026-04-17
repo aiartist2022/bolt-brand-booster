@@ -18,12 +18,22 @@ export const CHAPTERS = [
 export function SiteNav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [splashActive, setSplashActive] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const sync = () =>
+      setSplashActive(document.documentElement.dataset.splash === "active");
+    sync();
+    const handler = () => sync();
+    window.addEventListener("splash:change", handler);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("splash:change", handler);
+    };
   }, []);
+  if (splashActive) return null;
   return (
     <>
       <header

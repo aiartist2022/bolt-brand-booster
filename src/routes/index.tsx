@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import boltLogo from "@/assets/bolt-logo.png";
 import { CHAPTERS, SiteFooter } from "@/components/pitch/SiteChrome";
 import { StatGrid, Reveal, MediaSlot, Pill } from "@/components/pitch/primitives";
+import { SplashScrub } from "@/components/pitch/SplashScrub";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -13,8 +14,16 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Strategic roadmap to dominate UAE ride-hailing in 18 months." },
     ],
   }),
-  component: Home,
+  component: HomeWithSplash,
 });
+
+function HomeWithSplash() {
+  return (
+    <SplashScrub>
+      <Home />
+    </SplashScrub>
+  );
+}
 
 function Home() {
   return (
