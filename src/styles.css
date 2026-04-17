@@ -1,8 +1,21 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 @custom-variant dark (&:is(.dark *));
+
+/* Bolt brand utilities */
+@theme inline {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --color-bolt-green: var(--bolt-green);
+  --color-bolt-green-soft: var(--bolt-green-soft);
+  --color-bolt-dark: var(--bolt-dark);
+  --color-bolt-dark-2: var(--bolt-dark-2);
+  --color-bolt-cream: var(--bolt-cream);
+  --color-bolt-line: var(--bolt-line);
+}
 
 /*
  * Design system definition.
@@ -62,9 +75,17 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  /* Bolt brand */
+  --bolt-green: #2A9C64;
+  --bolt-green-soft: #E8F4ED;
+  --bolt-dark: #0C2C1C;
+  --bolt-dark-2: #061811;
+  --bolt-cream: #F6F4EE;
+  --bolt-line: rgba(12, 44, 28, 0.12);
+
+  --radius: 0.875rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.18 0.03 155);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
