@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StrategyRouteImport } from './routes/strategy'
+import { Route as SocialRouteImport } from './routes/social'
+import { Route as RoadmapRouteImport } from './routes/roadmap'
+import { Route as OohRouteImport } from './routes/ooh'
+import { Route as MarketIntelRouteImport } from './routes/market-intel'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as ContextRouteImport } from './routes/context'
+import { Route as CampaignsRouteImport } from './routes/campaigns'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StrategyRoute = StrategyRouteImport.update({
+  id: '/strategy',
+  path: '/strategy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SocialRoute = SocialRouteImport.update({
+  id: '/social',
+  path: '/social',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoadmapRoute = RoadmapRouteImport.update({
+  id: '/roadmap',
+  path: '/roadmap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OohRoute = OohRouteImport.update({
+  id: '/ooh',
+  path: '/ooh',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketIntelRoute = MarketIntelRouteImport.update({
+  id: '/market-intel',
+  path: '/market-intel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContextRoute = ContextRouteImport.update({
+  id: '/context',
+  path: '/context',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignsRoute = CampaignsRouteImport.update({
+  id: '/campaigns',
+  path: '/campaigns',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/campaigns': typeof CampaignsRoute
+  '/context': typeof ContextRoute
+  '/events': typeof EventsRoute
+  '/market-intel': typeof MarketIntelRoute
+  '/ooh': typeof OohRoute
+  '/roadmap': typeof RoadmapRoute
+  '/social': typeof SocialRoute
+  '/strategy': typeof StrategyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/campaigns': typeof CampaignsRoute
+  '/context': typeof ContextRoute
+  '/events': typeof EventsRoute
+  '/market-intel': typeof MarketIntelRoute
+  '/ooh': typeof OohRoute
+  '/roadmap': typeof RoadmapRoute
+  '/social': typeof SocialRoute
+  '/strategy': typeof StrategyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/campaigns': typeof CampaignsRoute
+  '/context': typeof ContextRoute
+  '/events': typeof EventsRoute
+  '/market-intel': typeof MarketIntelRoute
+  '/ooh': typeof OohRoute
+  '/roadmap': typeof RoadmapRoute
+  '/social': typeof SocialRoute
+  '/strategy': typeof StrategyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/campaigns'
+    | '/context'
+    | '/events'
+    | '/market-intel'
+    | '/ooh'
+    | '/roadmap'
+    | '/social'
+    | '/strategy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/campaigns'
+    | '/context'
+    | '/events'
+    | '/market-intel'
+    | '/ooh'
+    | '/roadmap'
+    | '/social'
+    | '/strategy'
+  id:
+    | '__root__'
+    | '/'
+    | '/campaigns'
+    | '/context'
+    | '/events'
+    | '/market-intel'
+    | '/ooh'
+    | '/roadmap'
+    | '/social'
+    | '/strategy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CampaignsRoute: typeof CampaignsRoute
+  ContextRoute: typeof ContextRoute
+  EventsRoute: typeof EventsRoute
+  MarketIntelRoute: typeof MarketIntelRoute
+  OohRoute: typeof OohRoute
+  RoadmapRoute: typeof RoadmapRoute
+  SocialRoute: typeof SocialRoute
+  StrategyRoute: typeof StrategyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/strategy': {
+      id: '/strategy'
+      path: '/strategy'
+      fullPath: '/strategy'
+      preLoaderRoute: typeof StrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/social': {
+      id: '/social'
+      path: '/social'
+      fullPath: '/social'
+      preLoaderRoute: typeof SocialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roadmap': {
+      id: '/roadmap'
+      path: '/roadmap'
+      fullPath: '/roadmap'
+      preLoaderRoute: typeof RoadmapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ooh': {
+      id: '/ooh'
+      path: '/ooh'
+      fullPath: '/ooh'
+      preLoaderRoute: typeof OohRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/market-intel': {
+      id: '/market-intel'
+      path: '/market-intel'
+      fullPath: '/market-intel'
+      preLoaderRoute: typeof MarketIntelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/context': {
+      id: '/context'
+      path: '/context'
+      fullPath: '/context'
+      preLoaderRoute: typeof ContextRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaigns': {
+      id: '/campaigns'
+      path: '/campaigns'
+      fullPath: '/campaigns'
+      preLoaderRoute: typeof CampaignsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CampaignsRoute: CampaignsRoute,
+  ContextRoute: ContextRoute,
+  EventsRoute: EventsRoute,
+  MarketIntelRoute: MarketIntelRoute,
+  OohRoute: OohRoute,
+  RoadmapRoute: RoadmapRoute,
+  SocialRoute: SocialRoute,
+  StrategyRoute: StrategyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -23,14 +23,13 @@ function Page() {
       <SectionShell tone="light" slideNo="R-01" chapter="Roadmap" title="The 90-Day Plan" kicker="Clear sprints, owned by Melt and Bolt jointly.">
         <div className="grid gap-6 lg:grid-cols-3">
           {[
-            { d: "Days 0–30", t: "Build", d: "Creative production, OOH lock, influencer onboarding, content engine setup." },
-            { d: "Days 30–60", t: "Launch", d: "Hero film live, OOH up, Abu Dhabi launch event, paid acquisition turned on." },
-            { d: "Days 60–90", t: "Scale", d: "Feature heroes, narrative series, optimisation cycle, share gain measurement." },
+            { period: "Days 0–30", t: "Build", d: "Creative production, OOH lock, influencer onboarding, content engine setup." },
+            { period: "Days 30–60", t: "Launch", d: "Hero film live, OOH up, Abu Dhabi launch event, paid acquisition turned on." },
+            { period: "Days 60–90", t: "Scale", d: "Feature heroes, narrative series, optimisation cycle, share gain measurement." },
           ].map((x) => (
-            <PitchCard key={x.d}>
-              <Pill>{x.d}</Pill>
+            <PitchCard key={x.period}>
+              <Pill>{x.period}</Pill>
               <div className="mt-4 font-display text-2xl font-bold">{x.t}</div>
-              <p className="mt-3 text-sm text-[var(--bolt-dark)]/70">{x.d ? x.d : ""}{x.d && " "}{x.d}</p>
               <p className="mt-3 text-sm text-[var(--bolt-dark)]/70">{x.d}</p>
             </PitchCard>
           ))}
