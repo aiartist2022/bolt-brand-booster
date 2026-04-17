@@ -68,6 +68,21 @@ export function SplashScrub({ children }: { children: ReactNode }) {
     };
   }, []);
 
+  // Mark splash active globally so SiteNav can hide
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (done) {
+      delete document.documentElement.dataset.splash;
+    } else {
+      document.documentElement.dataset.splash = "active";
+    }
+    window.dispatchEvent(new Event("splash:change"));
+    return () => {
+      delete document.documentElement.dataset.splash;
+      window.dispatchEvent(new Event("splash:change"));
+    };
+  }, [done]);
+
   // Lock body scroll while splash is loading so users don't scroll past nothing.
   useEffect(() => {
     if (done) return;
