@@ -1,8 +1,21 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 @custom-variant dark (&:is(.dark *));
+
+/* Bolt brand utilities */
+@theme inline {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --color-bolt-green: var(--bolt-green);
+  --color-bolt-green-soft: var(--bolt-green-soft);
+  --color-bolt-dark: var(--bolt-dark);
+  --color-bolt-dark-2: var(--bolt-dark-2);
+  --color-bolt-cream: var(--bolt-cream);
+  --color-bolt-line: var(--bolt-line);
+}
 
 /*
  * Design system definition.
@@ -62,9 +75,17 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  /* Bolt brand */
+  --bolt-green: #2A9C64;
+  --bolt-green-soft: #E8F4ED;
+  --bolt-dark: #0C2C1C;
+  --bolt-dark-2: #061811;
+  --bolt-cream: #F6F4EE;
+  --bolt-line: rgba(12, 44, 28, 0.12);
+
+  --radius: 0.875rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.18 0.03 155);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -137,8 +158,40 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--bolt-cream);
+    color: var(--bolt-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--bolt-green);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .text-balance { text-wrap: balance; }
+  .bolt-grid {
+    background-image:
+      linear-gradient(to right, var(--bolt-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--bolt-line) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .bolt-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
   }
 }
