@@ -151,18 +151,14 @@ export function SplashScrub({ children }: { children: ReactNode }) {
   }
 
   // rAF-driven scroll scrubbing
+  const [frameIdx, setFrameIdx] = useState(0);
   useEffect(() => {
     if (!ready || done) return;
 
     const tick = () => {
       const idx = currentFrameIndex();
       drawFrame(idx);
-      // When we hit the last frame, mark splash complete
-      if (idx >= FRAME_COUNT - 1) {
-        // tiny grace period for the final frame to render
-        setTimeout(() => setDone(true), 350);
-        return;
-      }
+      setFrameIdx(idx);
       rafRef.current = requestAnimationFrame(tick);
     };
     rafRef.current = requestAnimationFrame(tick);
@@ -171,6 +167,20 @@ export function SplashScrub({ children }: { children: ReactNode }) {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [ready, done]);
+
+  const atEnd = frameIdx >= FRAME_COUNT - 2;
+
+  // Section labels mapped to frame ranges
+  const SECTIONS: { from: number; to: number; eyebrow: string; title: string }[] = [
+    { from: 0, to: 22, eyebrow: "Chapter 01", title: "Context & Opportunity" },
+    { from: 23, to: 45, eyebrow: "Chapter 02", title: "Market Intelligence" },
+    { from: 46, to: 68, eyebrow: "Chapter 03", title: "Strategic Framework" },
+    { from: 69, to: 91, eyebrow: "Chapter 04", title: "Social & Content" },
+    { from: 92, to: 110, eyebrow: "Chapter 05", title: "OOH & Campaigns" },
+    { from: 111, to: 125, eyebrow: "Chapter 06", title: "Events & Activations" },
+    { from: 126, to: 134, eyebrow: "Chapter 07", title: "90-Day Roadmap" },
+  ];
+  const activeSection = SECTIONS.find((s) => frameIdx >= s.from && frameIdx <= s.to);
 
   // After splash completes, scroll user back to top so the revealed home
   // page starts from the top.
