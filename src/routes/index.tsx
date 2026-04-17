@@ -206,7 +206,17 @@ function Home() {
               </Reveal>
             </div>
             <div className="lg:col-span-7">
-              <MediaSlot kind="video" label="Hero Brand Film — 60s" caption="Suggested format: MP4 · 1920×1080 · ≤ 20MB" />
+              <div className="overflow-hidden rounded-2xl border border-[var(--bolt-line)] bg-[var(--bolt-dark)] shadow-2xl">
+                <video
+                  src="/media/brand-film.mp4"
+                  className="aspect-video w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                />
+              </div>
             </div>
           </div>
         </div>
