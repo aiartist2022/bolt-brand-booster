@@ -192,9 +192,9 @@ export function SplashScrub({ children }: { children: ReactNode }) {
   if (done) {
     return (
       <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.9, ease: [0.21, 0.47, 0.32, 0.98] }}
       >
         {children}
       </motion.div>
@@ -219,30 +219,120 @@ export function SplashScrub({ children }: { children: ReactNode }) {
             aria-hidden
           />
 
-          {/* Subtle vignette + grain overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[var(--bolt-dark)]/40 via-transparent to-[var(--bolt-dark)]/70" />
+          {/* Subtle vignette */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[var(--bolt-dark)]/50 via-transparent to-[var(--bolt-dark)]/80" />
+
+          {/* Section title overlays — fade in/out per frame range */}
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              {!atEnd && activeSection && (
+                <motion.div
+                  key={activeSection.title}
+                  initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, y: -24, filter: "blur(8px)" }}
+                  transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className="px-6 text-center text-white"
+                >
+                  <div className="flex items-center justify-center gap-3 text-[10px] font-semibold uppercase tracking-[0.4em] text-[var(--bolt-green)] md:text-xs">
+                    <span className="h-px w-8 bg-[var(--bolt-green)] md:w-12" />
+                    {activeSection.eyebrow}
+                    <span className="h-px w-8 bg-[var(--bolt-green)] md:w-12" />
+                  </div>
+                  <h2 className="mt-5 font-display text-4xl font-bold leading-[0.95] tracking-tight text-balance md:text-6xl lg:text-7xl">
+                    {activeSection.title}
+                  </h2>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Final banger headline + Enter button */}
+          <AnimatePresence>
+            {atEnd && (
+              <motion.div
+                key="finale"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.7 }}
+                className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-10 px-6 text-center text-white"
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15, duration: 0.7 }}
+                  className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.4em] text-[var(--bolt-green)] md:text-xs"
+                >
+                  <span className="h-px w-12 bg-[var(--bolt-green)]" />
+                  Bolt UAE × Melt Media
+                  <span className="h-px w-12 bg-[var(--bolt-green)]" />
+                </motion.div>
+                <motion.h1
+                  initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ delay: 0.25, duration: 0.9, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className="font-display text-6xl font-bold leading-[0.9] tracking-tight md:text-8xl lg:text-[9rem] text-balance"
+                >
+                  From <span className="text-[var(--bolt-green)]">#2</span>
+                  <br />
+                  to <span className="text-[var(--bolt-green)]">#1.</span>
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.7 }}
+                  className="max-w-xl text-base text-white/70 md:text-lg"
+                >
+                  18 months. 8 chapters. One challenger brand ready to show up.
+                </motion.p>
+                <motion.button
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.6 }}
+                  onClick={() => setDone(true)}
+                  className="group inline-flex items-center gap-3 rounded-full bg-[var(--bolt-green)] px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-[0_20px_60px_-15px_rgba(52,211,153,0.7)] transition hover:bg-white hover:text-[var(--bolt-dark)]"
+                >
+                  Enter the pitch
+                  <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current transition group-hover:translate-x-1" strokeWidth="2">
+                    <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </motion.button>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* HUD: bottom-left meta */}
-          <div className="pointer-events-none absolute bottom-8 left-6 right-6 flex items-end justify-between text-white lg:bottom-12 lg:left-12 lg:right-12">
-            <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 md:text-xs">
-              <span className="h-px w-8 bg-[var(--bolt-green)] md:w-12" />
-              Bolt UAE · Melt Media
-            </div>
-            <div className="hidden items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 md:flex md:text-xs">
-              Scroll to begin
-              <svg
-                viewBox="0 0 24 24"
-                className="h-4 w-4 animate-bounce fill-none stroke-current"
-                strokeWidth="2"
+          <AnimatePresence>
+            {!atEnd && (
+              <motion.div
+                key="hud"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="pointer-events-none absolute bottom-8 left-6 right-6 flex items-end justify-between text-white lg:bottom-12 lg:left-12 lg:right-12"
               >
-                <path
-                  d="M12 5v14M5 12l7 7 7-7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
+                <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 md:text-xs">
+                  <span className="h-px w-8 bg-[var(--bolt-green)] md:w-12" />
+                  Bolt UAE · Melt Media
+                </div>
+                <div className="hidden items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 md:flex md:text-xs">
+                  Scroll to explore
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4 animate-bounce fill-none stroke-current"
+                    strokeWidth="2"
+                  >
+                    <path
+                      d="M12 5v14M5 12l7 7 7-7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* Skip intro */}
           <button
