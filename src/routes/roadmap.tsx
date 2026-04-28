@@ -17,15 +17,16 @@ export const Route = createFileRoute("/roadmap")({
 function Page() {
   return (
     <main>
-      <ChapterHero num="08" title="Roadmap & KPIs" kicker="The 90-day action plan, the 18-month milestones and the success metrics that take Bolt to #1." mediaLabel="Roadmap Reel" />
+      <ChapterHero num="08" title="Roadmap & KPIs" kicker="The 4-week sprint to May 14 Abu Dhabi launch, the 6-month milestones and the metrics that take Bolt to #1." mediaLabel="Roadmap Reel" />
 
-      {/* 90-day plan */}
-      <SectionShell tone="light" slideNo="R-01" chapter="Roadmap" title="The 90-Day Plan" kicker="Clear sprints, owned by Melt and Bolt jointly.">
-        <div className="grid gap-6 lg:grid-cols-3">
+      {/* 4-week sprint */}
+      <SectionShell tone="light" slideNo="R-01" chapter="Roadmap" title="4-Week Sprint to Launch" kicker="Compressed timeline for Abu Dhabi launch · Target: May 14, 2026.">
+        <div className="grid gap-6 lg:grid-cols-4">
           {[
-            { period: "Days 0–30", t: "Build", d: "Creative production, OOH lock, influencer onboarding, content engine setup." },
-            { period: "Days 30–60", t: "Launch", d: "Hero film live, OOH up, Abu Dhabi launch event, paid acquisition turned on." },
-            { period: "Days 60–90", t: "Scale", d: "Feature heroes, narrative series, optimisation cycle, share gain measurement." },
+            { period: "Week 1 · May 1–10", t: "Planning", d: "Finalize creative, lock OOH placements, sign influencer contracts, confirm AD locations." },
+            { period: "Week 2 · May 11–17", t: "Production", d: "Build 30+ social assets, print & install OOH, scale community ops, launch video content." },
+            { period: "Week 3 · May 18–24", t: "Pre-Launch", d: "Seed influencer content, deploy outdoor assets, press outreach, team training." },
+            { period: "Week 4 · May 25–30", t: "Final Prep", d: "Soft launch, system tests, final approvals — Go-Live May 14." },
           ].map((x) => (
             <PitchCard key={x.period}>
               <Pill>{x.period}</Pill>
