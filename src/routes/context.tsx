@@ -87,8 +87,8 @@ function Page() {
         <div className="grid gap-6 lg:grid-cols-2">
           <PitchCard>
             <Pill>Careem · Market Leader</Pill>
-            <div className="mt-6 font-display text-6xl font-bold">65%</div>
-            <div className="mt-1 text-sm text-[var(--bolt-dark)]/60">Market share · 2.8M active users · 8+ years</div>
+            <div className="mt-6 font-display text-6xl font-bold">~60%</div>
+            <div className="mt-1 text-sm text-[var(--bolt-dark)]/60">Market share · super-app heritage · 8+ years</div>
             <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-[var(--bolt-dark)]/60">Key weaknesses</div>
             <BulletList items={["Peak-time ETA delays", "Higher cancellation rates", "Service inconsistency"]} />
           </PitchCard>
