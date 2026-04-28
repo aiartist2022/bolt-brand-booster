@@ -194,8 +194,8 @@ function Page() {
       <SectionShell tone="green" slideNo={19} chapter="Market Intel" title="Current State vs 12-Month Target" kicker="From #2 challenger to undisputed #1 in 12 months — measurable, monitored, and on-track.">
         <div className="grid gap-6 lg:grid-cols-2">
           {[
-            { label: "Today", share: "25%", rank: "#2", note: "Challenger position" },
-            { label: "12 months", share: "30%+", rank: "#1", note: "Market leader" },
+            { label: "Today", share: "~20%", rank: "#2", note: "Challenger position" },
+            { label: "Q3 2027", share: "30%+", rank: "#1", note: "Market leader" },
           ].map((x) => (
             <Reveal key={x.label}>
               <div className="rounded-2xl bg-white/10 p-10 backdrop-blur">
