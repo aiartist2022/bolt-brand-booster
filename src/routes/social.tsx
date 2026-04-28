@@ -38,9 +38,9 @@ function Page() {
       {/* Slide 28 — Community & advocacy */}
       <SectionShell tone="dark" slideNo={28} chapter="Social" title="Community & Advocacy" kicker="Building loyalty, advocacy and word-of-mouth through strategic community engagement.">
         <StatGrid tone="dark" cols={4} stats={[
-          { value: "10K", label: "Community Members Y1" },
-          { value: "500+", label: "Active Creators" },
-          { value: "2h", label: "Reply SLA" },
+          { value: "15K", label: "IG Followers · Nov 2026" },
+          { value: "8K", label: "TikTok Followers · Nov 2026" },
+          { value: "3–6%", label: "IG Engagement Target" },
           { value: "8%", label: "Engagement Target" },
         ]} />
       </SectionShell>
@@ -64,14 +64,14 @@ function Page() {
       </SectionShell>
 
       {/* Slide 39 — Topics & sentiment */}
-      <SectionShell tone="dark" slideNo={39} chapter="Social" title="Conversation Topics & Sentiment" kicker="Where the UAE ride-hailing conversation is happening — and how Bolt should show up.">
+      <SectionShell tone="dark" slideNo={39} chapter="Social" title="Conversation Topics & Sentiment" kicker="785 mentions · 14.74M impressions · sentiment score -4.1. Where the UAE conversation lives.">
         <div className="grid gap-3">
           {[
-            { topic: "Cancellations", mentions: "12.4K", sentiment: "Negative", color: "bg-red-500/30" },
-            { topic: "Surge Pricing", mentions: "9.1K", sentiment: "Negative", color: "bg-red-500/30" },
-            { topic: "Driver Quality", mentions: "7.6K", sentiment: "Mixed", color: "bg-yellow-500/30" },
-            { topic: "App Experience", mentions: "5.2K", sentiment: "Positive (Bolt-leaning)", color: "bg-[var(--bolt-green)]/30" },
-            { topic: "Safety", mentions: "4.8K", sentiment: "Positive (Pink Taxi)", color: "bg-[var(--bolt-green)]/30" },
+            { topic: "Bolt Driver", mentions: "29 mentions", sentiment: "Negative (service quality)", color: "bg-red-500/30" },
+            { topic: "Taxi Services", mentions: "45 mentions", sentiment: "Neutral", color: "bg-yellow-500/30" },
+            { topic: "Dubai / UAE", mentions: "692 mentions (88%)", sentiment: "Neutral", color: "bg-yellow-500/30" },
+            { topic: "Ride Sharing", mentions: "38 mentions", sentiment: "Positive", color: "bg-[var(--bolt-green)]/30" },
+            { topic: "Service Quality", mentions: "19 mentions", sentiment: "Negative", color: "bg-red-500/30" },
           ].map((x) => (
             <Reveal key={x.topic}>
               <div className="grid grid-cols-12 items-center gap-4 rounded-xl bg-white/5 p-4">

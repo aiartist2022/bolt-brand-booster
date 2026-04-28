@@ -25,12 +25,13 @@ function Page() {
       />
 
       {/* Slide 4 — Current Market Position */}
-      <SectionShell tone="light" slideNo={4} chapter="Context" title="Current Market Position" kicker="Bolt's position in UAE ride-hailing and the trajectory to #1 in 18 months.">
-        <div className="grid gap-6 lg:grid-cols-3">
+      <SectionShell tone="light" slideNo={4} chapter="Context" title="Current Market Position" kicker="Bolt's position in UAE ride-hailing and the trajectory to #1.">
+        <div className="grid gap-6 lg:grid-cols-4">
           {[
-            { rank: "1", brand: "Careem", share: "65%", note: "8+ years brand heritage" },
-            { rank: "2", brand: "Bolt", share: "25%", note: "Challenger · 4.2M active users", accent: true },
-            { rank: "3", brand: "Uber", share: "10%", note: "Premium positioning" },
+            { rank: "1", brand: "Careem", share: "~60%", note: "Market leader · super-app ecosystem" },
+            { rank: "2", brand: "Bolt", share: "~20%", note: "Challenger · DTC fleet · 4.2M MAU", accent: true },
+            { rank: "3", brand: "Uber", share: "10–15%", note: "Premium positioning" },
+            { rank: "4", brand: "Yango", share: "5–7%", note: "New entrant · price-led" },
           ].map((c) => (
             <PitchCard key={c.brand} accent={c.accent}>
               <div className="flex items-baseline justify-between">
@@ -46,28 +47,28 @@ function Page() {
           <StatGrid
             cols={4}
             stats={[
-              { value: "AED 2.8B", label: "Market Size" },
-              { value: "+15%", label: "YoY Growth" },
+              { value: "AED 1.25B", label: "Market Size" },
+              { value: "12–15%", label: "CAGR" },
               { value: "30%", label: "Target Share Q3 '27" },
-              { value: "50K", label: "New Users Target" },
+              { value: "50K", label: "AD Launch Installs" },
             ]}
           />
         </div>
       </SectionShell>
 
       {/* Slide 5 — The Opportunity */}
-      <SectionShell tone="dark" slideNo={5} chapter="Context" title="The Opportunity" kicker="A 2.8B AED market growing 12–15% YoY, with three under-served emirates ripe for share capture.">
+      <SectionShell tone="dark" slideNo={5} chapter="Context" title="The Opportunity" kicker="A 1.25B AED market growing 12–15% YoY, with three under-served emirates ripe for share capture.">
         <div className="grid gap-6 lg:grid-cols-4">
           {[
-            { city: "Dubai", share: "45%", pop: "Mature market", growth: "+25%" },
-            { city: "Abu Dhabi", share: "30%", pop: "1.5M+ residents · airport hub", growth: "+18%" },
-            { city: "Sharjah", share: "15%", pop: "1.8M+ population · underserved", growth: "+22%" },
-            { city: "Ajman", share: "10%", pop: "500K+ residents · low competition", growth: "+20%" },
+            { city: "Dubai", share: "60%", pop: "Mature · highest penetration", growth: "+12%" },
+            { city: "Abu Dhabi", share: "20%", pop: "4.1M+ residents · 33M airport pax", growth: "+18%" },
+            { city: "Sharjah", share: "12%", pop: "1.9M+ population · underserved", growth: "+25%" },
+            { city: "Ajman / RAK / Fuj / UAQ", share: "8%", pop: "Northern emirates · low competition", growth: "+22%" },
           ].map((c) => (
             <PitchCard key={c.city} tone="dark">
               <div className="font-display text-sm font-semibold text-[var(--bolt-green)]">{c.city}</div>
               <div className="mt-6 font-display text-5xl font-bold">{c.share}</div>
-              <div className="mt-1 text-xs uppercase tracking-wider text-white/50">Bolt share</div>
+              <div className="mt-1 text-xs uppercase tracking-wider text-white/50">Penetration</div>
               <div className="mt-6 text-sm text-white/70">{c.pop}</div>
               <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--bolt-green)]/15 px-3 py-1 text-xs font-semibold text-[var(--bolt-green)]">
                 {c.growth} growth opportunity
@@ -86,14 +87,14 @@ function Page() {
         <div className="grid gap-6 lg:grid-cols-2">
           <PitchCard>
             <Pill>Careem · Market Leader</Pill>
-            <div className="mt-6 font-display text-6xl font-bold">65%</div>
-            <div className="mt-1 text-sm text-[var(--bolt-dark)]/60">Market share · 2.8M active users · 8+ years</div>
+            <div className="mt-6 font-display text-6xl font-bold">~60%</div>
+            <div className="mt-1 text-sm text-[var(--bolt-dark)]/60">Market share · super-app heritage · 8+ years</div>
             <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-[var(--bolt-dark)]/60">Key weaknesses</div>
             <BulletList items={["Peak-time ETA delays", "Higher cancellation rates", "Service inconsistency"]} />
           </PitchCard>
           <PitchCard>
             <Pill>Uber · Premium Position</Pill>
-            <div className="mt-6 font-display text-6xl font-bold">10%</div>
+            <div className="mt-6 font-display text-6xl font-bold">10–15%</div>
             <div className="mt-1 text-sm text-[var(--bolt-dark)]/60">Market share · global brand · premium focus</div>
             <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-[var(--bolt-dark)]/60">Key weaknesses</div>
             <BulletList items={["High pricing perception", "Limited local presence", "Airport focus only"]} />
@@ -154,8 +155,8 @@ function Page() {
               <p className="mt-2 text-sm text-[var(--bolt-dark)]/70">Focus on brand building before performance marketing.</p>
             </PitchCard>
             <PitchCard>
-              <div className="font-display text-xl font-bold">Abu Dhabi Launch in 4 Weeks</div>
-              <p className="mt-2 text-sm text-[var(--bolt-dark)]/70">Target mid-May 2026 for go-live.</p>
+              <div className="font-display text-xl font-bold">Abu Dhabi Launch · May 14, 2026</div>
+              <p className="mt-2 text-sm text-[var(--bolt-dark)]/70">4-week sprint to go-live.</p>
             </PitchCard>
             <PitchCard>
               <div className="font-display text-xl font-bold">Community Building</div>
@@ -165,10 +166,11 @@ function Page() {
           <div className="space-y-4">
             <Pill>Launch Timeline</Pill>
             {[
-              { w: "Week 1–2 · April", t: "Planning", d: "Finalize creative, lock OOH placements" },
-              { w: "Week 2 · May", t: "Production", d: "Build 50+ assets, OOH production" },
-              { w: "Week 4 · Mid-May", t: "Launch", d: "Seed content, OOH, PR" },
-              { w: "Sept 15, 2026", t: "Abu Dhabi Go-Live", d: "30% awareness · 50K installs · 8% engagement" },
+              { w: "Week 1 · May 1–10", t: "Planning", d: "Finalize creative, lock OOH, sign influencers" },
+              { w: "Week 2 · May 11–17", t: "Production", d: "Build 30+ assets, OOH production, video" },
+              { w: "Week 3 · May 18–24", t: "Pre-Launch", d: "Seed influencer content, install OOH, PR outreach" },
+              { w: "Week 4 · May 25–30", t: "Final Prep", d: "Soft launch, team training, system tests" },
+              { w: "May 14, 2026", t: "Abu Dhabi Go-Live", d: "30% awareness · 50K installs · 8% engagement" },
             ].map((x, i) => (
               <Reveal key={i}>
                 <div className="flex gap-5 border-l-2 border-[var(--bolt-green)] pl-5">

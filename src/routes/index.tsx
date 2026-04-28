@@ -9,9 +9,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Bolt UAE × Melt Media — Pitch" },
-      { name: "description", content: "From #2 to #1 in UAE ride-hailing. The strategic pitch." },
+      { name: "description", content: "From #2 to #1 in UAE ride-hailing. Launch May 14, 2026 — Abu Dhabi first." },
       { property: "og:title", content: "Bolt UAE × Melt Media — Pitch" },
-      { property: "og:description", content: "Strategic roadmap to dominate UAE ride-hailing in 18 months." },
+      { property: "og:description", content: "Three-pillar strategy to dominate UAE ride-hailing. Awareness · Content · Community." },
     ],
   }),
   component: HomeWithSplash,
@@ -98,9 +98,9 @@ function Home() {
               >
                 {[
                   { v: "#2", l: "Current Position" },
-                  { v: "18mo", l: "Target to #1" },
-                  { v: "AED 2.8B", l: "Market Size" },
-                  { v: "+15%", l: "YoY Growth" },
+                  { v: "May 14", l: "AD Launch · 2026" },
+                  { v: "AED 1.25B", l: "Market Size" },
+                  { v: "12–15%", l: "CAGR" },
                 ].map((s) => (
                   <div key={s.l} className="flex items-baseline justify-between border-b border-white/10 pb-3">
                     <span className="font-display text-3xl font-bold text-[var(--bolt-green)]">{s.v}</span>
@@ -186,10 +186,10 @@ function Home() {
               tone="green"
               cols={4}
               stats={[
-                { value: "AED 2.8B", label: "Market Size" },
-                { value: "12.5%", label: "CAGR" },
+                { value: "AED 1.25B", label: "Market Size" },
+                { value: "12–15%", label: "CAGR" },
                 { value: "4.2M", label: "Active Users" },
-                { value: "65%", label: "Dubai Penetration" },
+                { value: "60%", label: "Dubai Penetration" },
               ]}
             />
           </div>

@@ -24,32 +24,32 @@ function Page() {
         <StatGrid
           cols={4}
           stats={[
-            { value: "AED 2.8B", label: "Market Size" },
-            { value: "12.5%", label: "CAGR" },
+            { value: "AED 1.25B", label: "Market Size" },
+            { value: "12–15%", label: "CAGR" },
             { value: "4.2M", label: "Active Users" },
-            { value: "65%", label: "Dubai Penetration" },
+            { value: "39–41%", label: "UAE Penetration" },
           ]}
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <PitchCard>
             <Pill>Penetration by Emirate</Pill>
             <div className="mt-6 space-y-5">
-              <ProgressBar value={65} label="Dubai" />
-              <ProgressBar value={45} label="Abu Dhabi" />
-              <ProgressBar value={30} label="Sharjah" />
-              <ProgressBar value={25} label="Ajman" />
+              <ProgressBar value={60} label="Dubai" />
+              <ProgressBar value={20} label="Abu Dhabi" />
+              <ProgressBar value={12} label="Sharjah" />
+              <ProgressBar value={8} label="Ajman · RAK · Fujairah · UAQ" />
             </div>
           </PitchCard>
           <PitchCard accent>
-            <Pill tone="dark" solid>Growth Forecast 2024–2026</Pill>
+            <Pill tone="dark" solid>Growth Forecast 2025–2026</Pill>
             <div className="mt-10 grid grid-cols-2 gap-6">
               <div>
-                <div className="font-display text-6xl font-bold">+18%</div>
-                <div className="mt-2 text-sm text-white/70">Revenue Growth</div>
+                <div className="font-display text-6xl font-bold">+12–15%</div>
+                <div className="mt-2 text-sm text-white/70">UAE CAGR</div>
               </div>
               <div>
-                <div className="font-display text-6xl font-bold">+22%</div>
-                <div className="mt-2 text-sm text-white/70">User Growth</div>
+                <div className="font-display text-6xl font-bold">+18%</div>
+                <div className="mt-2 text-sm text-white/70">MEA Forecast</div>
               </div>
             </div>
           </PitchCard>
@@ -61,17 +61,17 @@ function Page() {
         <div className="grid gap-6 lg:grid-cols-3">
           {[
             {
-              name: "Careem", role: "Market Leader", share: "65%", angle: "Super App Ecosystem",
-              s: ["Scale & market dominance", "Super app ecosystem", "8+ years brand heritage", "2.8M active users"],
+              name: "Careem", role: "Market Leader", share: "~60%", angle: "Super App Ecosystem",
+              s: ["Scale & market dominance", "Super app ecosystem", "8+ years brand heritage", "Loyalty programs"],
               w: ["Peak-time ETA delays", "Service inconsistency", "Higher cancellation rates"],
             },
             {
-              name: "Uber", role: "Challenger", share: "10%", angle: "Premium Positioning",
+              name: "Uber", role: "Challenger", share: "10–15%", angle: "Premium Positioning",
               s: ["Global brand recognition", "Premium positioning", "Airport focus", "Quality vehicles"],
               w: ["High pricing perception", "Limited local presence", "Airport focus only"],
             },
             {
-              name: "Yango", role: "Follower", share: "5%", angle: "New Entrant",
+              name: "Yango", role: "Follower", share: "5–7%", angle: "New Entrant",
               s: ["Modern app interface", "Competitive pricing", "Tech-forward features", "Young user base"],
               w: ["Limited traction", "Regulatory headwinds", "Small fleet size"],
             },
@@ -174,9 +174,9 @@ function Page() {
         <div className="grid gap-6 lg:grid-cols-4">
           {[
             { v: "4.2M", l: "UAE monthly active riders", d: "Across all ride-hailing apps" },
-            { v: "1.5M+", l: "Abu Dhabi residents", d: "ADNEC + airport hub demand" },
-            { v: "2.3M+", l: "Sharjah + Ajman residents", d: "Underserved & high-margin" },
-            { v: "AED 32", l: "Average ride", d: "Mid-distance · 12 min" },
+            { v: "4.1M+", l: "Abu Dhabi residents", d: "33M annual airport passengers" },
+            { v: "2.4M+", l: "Sharjah + Ajman residents", d: "15+ universities · 50K+ students" },
+            { v: "AED 32", l: "Average ride", d: "5–12 km intra-city · base pricing" },
           ].map((x) => (
             <PitchCard key={x.l} tone="dark">
               <div className="font-display text-5xl font-bold text-[var(--bolt-green)]">{x.v}</div>
@@ -194,8 +194,8 @@ function Page() {
       <SectionShell tone="green" slideNo={19} chapter="Market Intel" title="Current State vs 12-Month Target" kicker="From #2 challenger to undisputed #1 in 12 months — measurable, monitored, and on-track.">
         <div className="grid gap-6 lg:grid-cols-2">
           {[
-            { label: "Today", share: "25%", rank: "#2", note: "Challenger position" },
-            { label: "12 months", share: "30%+", rank: "#1", note: "Market leader" },
+            { label: "Today", share: "~20%", rank: "#2", note: "Challenger position" },
+            { label: "Q3 2027", share: "30%+", rank: "#1", note: "Market leader" },
           ].map((x) => (
             <Reveal key={x.label}>
               <div className="rounded-2xl bg-white/10 p-10 backdrop-blur">

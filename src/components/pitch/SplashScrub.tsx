@@ -172,13 +172,14 @@ export function SplashScrub({ children }: { children: ReactNode }) {
 
   // Section labels mapped to frame ranges
   const SECTIONS: { from: number; to: number; eyebrow: string; title: string }[] = [
-    { from: 0, to: 22, eyebrow: "Chapter 01", title: "Context & Opportunity" },
-    { from: 23, to: 45, eyebrow: "Chapter 02", title: "Market Intelligence" },
-    { from: 46, to: 68, eyebrow: "Chapter 03", title: "Strategic Framework" },
-    { from: 69, to: 91, eyebrow: "Chapter 04", title: "Social & Content" },
-    { from: 92, to: 110, eyebrow: "Chapter 05", title: "OOH & Campaigns" },
-    { from: 111, to: 125, eyebrow: "Chapter 06", title: "Events & Activations" },
-    { from: 126, to: 134, eyebrow: "Chapter 07", title: "90-Day Roadmap" },
+    { from: 0, to: 18, eyebrow: "Chapter 01", title: "Market & Competition" },
+    { from: 19, to: 36, eyebrow: "Chapter 02", title: "Context & Opportunity" },
+    { from: 37, to: 54, eyebrow: "Chapter 03", title: "Brand Positioning" },
+    { from: 55, to: 72, eyebrow: "Chapter 04", title: "Strategic Framework" },
+    { from: 73, to: 90, eyebrow: "Pillar 01", title: "Awareness Dominance" },
+    { from: 91, to: 108, eyebrow: "Pillar 02", title: "Content Superiority" },
+    { from: 109, to: 126, eyebrow: "Pillar 03", title: "Community Building" },
+    { from: 127, to: 134, eyebrow: "Closing", title: "Reporting & Roadmap" },
   ];
   const activeSection = SECTIONS.find((s) => frameIdx >= s.from && frameIdx <= s.to);
 
@@ -284,7 +285,7 @@ export function SplashScrub({ children }: { children: ReactNode }) {
                   transition={{ delay: 0.5, duration: 0.7 }}
                   className="max-w-xl text-base text-white/70 md:text-lg"
                 >
-                  18 months. 8 chapters. One challenger brand ready to show up.
+                  4 weeks to launch · 3 pillars · One challenger brand ready to show up. May 14, 2026.
                 </motion.p>
                 <motion.button
                   initial={{ opacity: 0, y: 16 }}
