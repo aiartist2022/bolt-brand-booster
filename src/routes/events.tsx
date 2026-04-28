@@ -55,8 +55,30 @@ function Page() {
         </div>
       </SectionShell>
 
-      {/* Abu Dhabi launch event (slide 88 / detail) */}
-      <SectionShell tone="green" slideNo="AD-Launch" chapter="Events" title="Abu Dhabi Launch · Sept 2026" kicker="A two-week burst with 15 OOH locations, 20+ lamp posts, 50+ wrapped vehicles, ambassadors and influencer rollout.">
+      {/* Brand Ambassador — Terry Crews */}
+      <SectionShell tone="dark" slideNo="Pillar 3" chapter="Community" title="Brand Ambassador · Terry Crews" kicker="A globally-recognised face to fast-track trust in the UAE's relationship-driven market. Neither Uber nor Careem UAE has a named ambassador — blue ocean.">
+        <StatGrid tone="dark" cols={4} stats={[
+          { value: "15.6M", label: "Instagram Followers" },
+          { value: "24.6M", label: "TikTok Followers" },
+          { value: "354M", label: "IG Views (annual)" },
+          { value: "9.9%", label: "Engagement Rate" },
+        ]} />
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {[
+            { t: "Trust Transfer", d: "A known face cuts the awareness-to-trial gap from months to days." },
+            { t: "Cut-Through", d: "Earned media, PR coverage, organic amplification no paid budget can replicate." },
+            { t: "Always-On Narrative", d: "6–12 months of brand storytelling vs. a 48-hour influencer post." },
+          ].map((x) => (
+            <PitchCard key={x.t} tone="dark">
+              <div className="font-display text-xl font-bold">{x.t}</div>
+              <p className="mt-3 text-sm text-white/75">{x.d}</p>
+            </PitchCard>
+          ))}
+        </div>
+      </SectionShell>
+
+      {/* Slide 88 — Abu Dhabi Launch */}
+      <SectionShell tone="green" slideNo="AD-Launch" chapter="Events" title="Abu Dhabi Launch · May 14, 2026" kicker="A 4-week sprint with 15 OOH locations, 20+ lamp posts, 50+ wrapped vehicles, ambassadors and influencer rollout.">
         <StatGrid tone="green" cols={4} stats={[
           { value: "15", label: "OOH Locations" },
           { value: "20+", label: "Lamp Posts" },
