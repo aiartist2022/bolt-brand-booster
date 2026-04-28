@@ -94,7 +94,7 @@ function Page() {
           </PitchCard>
           <PitchCard>
             <Pill>Uber · Premium Position</Pill>
-            <div className="mt-6 font-display text-6xl font-bold">10%</div>
+            <div className="mt-6 font-display text-6xl font-bold">10–15%</div>
             <div className="mt-1 text-sm text-[var(--bolt-dark)]/60">Market share · global brand · premium focus</div>
             <div className="mt-8 text-xs font-semibold uppercase tracking-wider text-[var(--bolt-dark)]/60">Key weaknesses</div>
             <BulletList items={["High pricing perception", "Limited local presence", "Airport focus only"]} />
