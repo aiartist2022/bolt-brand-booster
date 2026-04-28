@@ -155,8 +155,8 @@ function Page() {
               <p className="mt-2 text-sm text-[var(--bolt-dark)]/70">Focus on brand building before performance marketing.</p>
             </PitchCard>
             <PitchCard>
-              <div className="font-display text-xl font-bold">Abu Dhabi Launch in 4 Weeks</div>
-              <p className="mt-2 text-sm text-[var(--bolt-dark)]/70">Target mid-May 2026 for go-live.</p>
+              <div className="font-display text-xl font-bold">Abu Dhabi Launch · May 14, 2026</div>
+              <p className="mt-2 text-sm text-[var(--bolt-dark)]/70">4-week sprint to go-live.</p>
             </PitchCard>
             <PitchCard>
               <div className="font-display text-xl font-bold">Community Building</div>
@@ -166,10 +166,11 @@ function Page() {
           <div className="space-y-4">
             <Pill>Launch Timeline</Pill>
             {[
-              { w: "Week 1–2 · April", t: "Planning", d: "Finalize creative, lock OOH placements" },
-              { w: "Week 2 · May", t: "Production", d: "Build 50+ assets, OOH production" },
-              { w: "Week 4 · Mid-May", t: "Launch", d: "Seed content, OOH, PR" },
-              { w: "Sept 15, 2026", t: "Abu Dhabi Go-Live", d: "30% awareness · 50K installs · 8% engagement" },
+              { w: "Week 1 · May 1–10", t: "Planning", d: "Finalize creative, lock OOH, sign influencers" },
+              { w: "Week 2 · May 11–17", t: "Production", d: "Build 30+ assets, OOH production, video" },
+              { w: "Week 3 · May 18–24", t: "Pre-Launch", d: "Seed influencer content, install OOH, PR outreach" },
+              { w: "Week 4 · May 25–30", t: "Final Prep", d: "Soft launch, team training, system tests" },
+              { w: "May 14, 2026", t: "Abu Dhabi Go-Live", d: "30% awareness · 50K installs · 8% engagement" },
             ].map((x, i) => (
               <Reveal key={i}>
                 <div className="flex gap-5 border-l-2 border-[var(--bolt-green)] pl-5">
