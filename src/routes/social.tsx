@@ -38,9 +38,9 @@ function Page() {
       {/* Slide 28 — Community & advocacy */}
       <SectionShell tone="dark" slideNo={28} chapter="Social" title="Community & Advocacy" kicker="Building loyalty, advocacy and word-of-mouth through strategic community engagement.">
         <StatGrid tone="dark" cols={4} stats={[
-          { value: "10K", label: "Community Members Y1" },
-          { value: "500+", label: "Active Creators" },
-          { value: "2h", label: "Reply SLA" },
+          { value: "15K", label: "IG Followers · Nov 2026" },
+          { value: "8K", label: "TikTok Followers · Nov 2026" },
+          { value: "3–6%", label: "IG Engagement Target" },
           { value: "8%", label: "Engagement Target" },
         ]} />
       </SectionShell>
