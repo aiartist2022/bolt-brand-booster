@@ -285,7 +285,7 @@ export function SplashScrub({ children }: { children: ReactNode }) {
                   transition={{ delay: 0.5, duration: 0.7 }}
                   className="max-w-xl text-base text-white/70 md:text-lg"
                 >
-                  18 months. 8 chapters. One challenger brand ready to show up.
+                  4 weeks to launch · 3 pillars · One challenger brand ready to show up. May 14, 2026.
                 </motion.p>
                 <motion.button
                   initial={{ opacity: 0, y: 16 }}
