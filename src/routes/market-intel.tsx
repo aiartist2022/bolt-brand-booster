@@ -24,32 +24,32 @@ function Page() {
         <StatGrid
           cols={4}
           stats={[
-            { value: "AED 2.8B", label: "Market Size" },
-            { value: "12.5%", label: "CAGR" },
+            { value: "AED 1.25B", label: "Market Size" },
+            { value: "12–15%", label: "CAGR" },
             { value: "4.2M", label: "Active Users" },
-            { value: "65%", label: "Dubai Penetration" },
+            { value: "39–41%", label: "UAE Penetration" },
           ]}
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <PitchCard>
             <Pill>Penetration by Emirate</Pill>
             <div className="mt-6 space-y-5">
-              <ProgressBar value={65} label="Dubai" />
-              <ProgressBar value={45} label="Abu Dhabi" />
-              <ProgressBar value={30} label="Sharjah" />
-              <ProgressBar value={25} label="Ajman" />
+              <ProgressBar value={60} label="Dubai" />
+              <ProgressBar value={20} label="Abu Dhabi" />
+              <ProgressBar value={12} label="Sharjah" />
+              <ProgressBar value={8} label="Ajman · RAK · Fujairah · UAQ" />
             </div>
           </PitchCard>
           <PitchCard accent>
-            <Pill tone="dark" solid>Growth Forecast 2024–2026</Pill>
+            <Pill tone="dark" solid>Growth Forecast 2025–2026</Pill>
             <div className="mt-10 grid grid-cols-2 gap-6">
               <div>
-                <div className="font-display text-6xl font-bold">+18%</div>
-                <div className="mt-2 text-sm text-white/70">Revenue Growth</div>
+                <div className="font-display text-6xl font-bold">+12–15%</div>
+                <div className="mt-2 text-sm text-white/70">UAE CAGR</div>
               </div>
               <div>
-                <div className="font-display text-6xl font-bold">+22%</div>
-                <div className="mt-2 text-sm text-white/70">User Growth</div>
+                <div className="font-display text-6xl font-bold">+18%</div>
+                <div className="mt-2 text-sm text-white/70">MEA Forecast</div>
               </div>
             </div>
           </PitchCard>
