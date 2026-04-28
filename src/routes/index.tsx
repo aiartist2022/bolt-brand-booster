@@ -98,9 +98,9 @@ function Home() {
               >
                 {[
                   { v: "#2", l: "Current Position" },
-                  { v: "18mo", l: "Target to #1" },
-                  { v: "AED 2.8B", l: "Market Size" },
-                  { v: "+15%", l: "YoY Growth" },
+                  { v: "May 14", l: "AD Launch · 2026" },
+                  { v: "AED 1.25B", l: "Market Size" },
+                  { v: "12–15%", l: "CAGR" },
                 ].map((s) => (
                   <div key={s.l} className="flex items-baseline justify-between border-b border-white/10 pb-3">
                     <span className="font-display text-3xl font-bold text-[var(--bolt-green)]">{s.v}</span>
