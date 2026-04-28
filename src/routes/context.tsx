@@ -57,18 +57,18 @@ function Page() {
       </SectionShell>
 
       {/* Slide 5 — The Opportunity */}
-      <SectionShell tone="dark" slideNo={5} chapter="Context" title="The Opportunity" kicker="A 2.8B AED market growing 12–15% YoY, with three under-served emirates ripe for share capture.">
+      <SectionShell tone="dark" slideNo={5} chapter="Context" title="The Opportunity" kicker="A 1.25B AED market growing 12–15% YoY, with three under-served emirates ripe for share capture.">
         <div className="grid gap-6 lg:grid-cols-4">
           {[
-            { city: "Dubai", share: "45%", pop: "Mature market", growth: "+25%" },
-            { city: "Abu Dhabi", share: "30%", pop: "1.5M+ residents · airport hub", growth: "+18%" },
-            { city: "Sharjah", share: "15%", pop: "1.8M+ population · underserved", growth: "+22%" },
-            { city: "Ajman", share: "10%", pop: "500K+ residents · low competition", growth: "+20%" },
+            { city: "Dubai", share: "60%", pop: "Mature · highest penetration", growth: "+12%" },
+            { city: "Abu Dhabi", share: "20%", pop: "4.1M+ residents · 33M airport pax", growth: "+18%" },
+            { city: "Sharjah", share: "12%", pop: "1.9M+ population · underserved", growth: "+25%" },
+            { city: "Ajman / RAK / Fuj / UAQ", share: "8%", pop: "Northern emirates · low competition", growth: "+22%" },
           ].map((c) => (
             <PitchCard key={c.city} tone="dark">
               <div className="font-display text-sm font-semibold text-[var(--bolt-green)]">{c.city}</div>
               <div className="mt-6 font-display text-5xl font-bold">{c.share}</div>
-              <div className="mt-1 text-xs uppercase tracking-wider text-white/50">Bolt share</div>
+              <div className="mt-1 text-xs uppercase tracking-wider text-white/50">Penetration</div>
               <div className="mt-6 text-sm text-white/70">{c.pop}</div>
               <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--bolt-green)]/15 px-3 py-1 text-xs font-semibold text-[var(--bolt-green)]">
                 {c.growth} growth opportunity
