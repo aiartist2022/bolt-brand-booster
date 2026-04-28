@@ -52,13 +52,13 @@ function Page() {
       </SectionShell>
 
       {/* Slide 24 — Audience tiers */}
-      <SectionShell tone="light" slideNo={24} chapter="Strategy" title="Audience Tiers" kicker="Primary, secondary, tertiary and niche segments — each with their own message and channel.">
+      <SectionShell tone="light" slideNo={24} chapter="Strategy" title="Audience Tiers" kicker="Four target segments — each with their own message, channel and ride economics.">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { tier: "Primary", who: "Daily commuters 22–40", note: "Affluent urban professionals", colour: true },
-            { tier: "Secondary", who: "Airport & business travel", note: "Frequent flyers · Flight tracking" },
-            { tier: "Tertiary", who: "Families & shoppers", note: "POD vehicle use cases" },
-            { tier: "Niche", who: "Women riders", note: "Pink Taxi safety positioning" },
+            { tier: "Primary · 45%", who: "Daily Commuters 25–45", note: "Value + convenience · AED 35–40 ride", colour: true },
+            { tier: "Secondary · 25%", who: "Airport Travelers", note: "Flight tracking USP · AED 65–95 ride" },
+            { tier: "Tertiary · 20%", who: "Night-Out Users", note: "Late-night safety · social occasions" },
+            { tier: "Niche · 10%", who: "Female Riders", note: "Pink Taxi · safety-first" },
           ].map((x) => (
             <PitchCard key={x.tier} accent={x.colour}>
               <Pill tone={x.colour ? "dark" : "light"} solid={x.colour}>{x.tier}</Pill>
