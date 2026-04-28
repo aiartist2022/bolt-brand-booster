@@ -174,9 +174,9 @@ function Page() {
         <div className="grid gap-6 lg:grid-cols-4">
           {[
             { v: "4.2M", l: "UAE monthly active riders", d: "Across all ride-hailing apps" },
-            { v: "1.5M+", l: "Abu Dhabi residents", d: "ADNEC + airport hub demand" },
-            { v: "2.3M+", l: "Sharjah + Ajman residents", d: "Underserved & high-margin" },
-            { v: "AED 32", l: "Average ride", d: "Mid-distance · 12 min" },
+            { v: "4.1M+", l: "Abu Dhabi residents", d: "33M annual airport passengers" },
+            { v: "2.4M+", l: "Sharjah + Ajman residents", d: "15+ universities · 50K+ students" },
+            { v: "AED 32", l: "Average ride", d: "5–12 km intra-city · base pricing" },
           ].map((x) => (
             <PitchCard key={x.l} tone="dark">
               <div className="font-display text-5xl font-bold text-[var(--bolt-green)]">{x.v}</div>
