@@ -69,6 +69,58 @@ function Page() {
         </div>
       </SectionShell>
 
+      {/* Instagram + TikTok milestone tracker */}
+      <SectionShell tone="dark" slideNo="R-03b" chapter="Roadmap" title="Social Growth Milestones" kicker="Monthly tracking · June → November 2026. Baseline: IG 3,000 followers · TikTok 11 followers.">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <PitchCard tone="dark">
+            <Pill tone="dark">Instagram</Pill>
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="font-display text-4xl font-bold text-[var(--bolt-green)]">~15K</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">Followers · Nov</div>
+              </div>
+              <div>
+                <div className="font-display text-4xl font-bold text-[var(--bolt-green)]">3–6%</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">Engagement</div>
+              </div>
+              <div>
+                <div className="font-display text-4xl font-bold text-[var(--bolt-green)]">#2</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">Competitor Rank</div>
+              </div>
+            </div>
+            <div className="mt-6 space-y-2 text-sm text-white/75">
+              <div className="flex justify-between border-b border-white/10 pb-1"><span>Jun · 3.2K</span><span>Launch content series</span></div>
+              <div className="flex justify-between border-b border-white/10 pb-1"><span>Aug · 5.5K</span><span>Cultural moment hook</span></div>
+              <div className="flex justify-between border-b border-white/10 pb-1"><span>Oct · 10K</span><span>UGC hashtag</span></div>
+              <div className="flex justify-between"><span>Nov · 14K</span><span>Full brand rhythm</span></div>
+            </div>
+          </PitchCard>
+          <PitchCard tone="dark">
+            <Pill tone="dark">TikTok</Pill>
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="font-display text-4xl font-bold text-[var(--bolt-green)]">~8K</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">Followers · Nov</div>
+              </div>
+              <div>
+                <div className="font-display text-4xl font-bold text-[var(--bolt-green)]">~50K</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">Avg Video Views</div>
+              </div>
+              <div>
+                <div className="font-display text-4xl font-bold text-[var(--bolt-green)]">FYP</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">Algorithm Status</div>
+              </div>
+            </div>
+            <div className="mt-6 space-y-2 text-sm text-white/75">
+              <div className="flex justify-between border-b border-white/10 pb-1"><span>Jul · 600</span><span>Dracula trend Reel</span></div>
+              <div className="flex justify-between border-b border-white/10 pb-1"><span>Aug · 2K</span><span>Series launches</span></div>
+              <div className="flex justify-between border-b border-white/10 pb-1"><span>Oct · 6K</span><span>Influencer stitches</span></div>
+              <div className="flex justify-between"><span>Nov · 8K</span><span>Full FYP traction</span></div>
+            </div>
+          </PitchCard>
+        </div>
+      </SectionShell>
+
       {/* Slides 100-102 — Paid media */}
       <SectionShell tone="green" slideNo="100–102" chapter="Roadmap" title="Paid Media Plan" kicker="Performance-based acquisition complementing Bolt's in-house team — advanced optimisation, SKAN-ready, cross-channel integration.">
         <div className="grid gap-6 lg:grid-cols-3">
