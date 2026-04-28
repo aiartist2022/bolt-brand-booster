@@ -9,9 +9,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Bolt UAE × Melt Media — Pitch" },
-      { name: "description", content: "From #2 to #1 in UAE ride-hailing. The strategic pitch." },
+      { name: "description", content: "From #2 to #1 in UAE ride-hailing. Launch May 14, 2026 — Abu Dhabi first." },
       { property: "og:title", content: "Bolt UAE × Melt Media — Pitch" },
-      { property: "og:description", content: "Strategic roadmap to dominate UAE ride-hailing in 18 months." },
+      { property: "og:description", content: "Three-pillar strategy to dominate UAE ride-hailing. Awareness · Content · Community." },
     ],
   }),
   component: HomeWithSplash,
