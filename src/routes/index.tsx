@@ -186,10 +186,10 @@ function Home() {
               tone="green"
               cols={4}
               stats={[
-                { value: "AED 2.8B", label: "Market Size" },
-                { value: "12.5%", label: "CAGR" },
+                { value: "AED 1.25B", label: "Market Size" },
+                { value: "12–15%", label: "CAGR" },
                 { value: "4.2M", label: "Active Users" },
-                { value: "65%", label: "Dubai Penetration" },
+                { value: "60%", label: "Dubai Penetration" },
               ]}
             />
           </div>
