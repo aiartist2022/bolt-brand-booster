@@ -61,17 +61,17 @@ function Page() {
         <div className="grid gap-6 lg:grid-cols-3">
           {[
             {
-              name: "Careem", role: "Market Leader", share: "65%", angle: "Super App Ecosystem",
-              s: ["Scale & market dominance", "Super app ecosystem", "8+ years brand heritage", "2.8M active users"],
+              name: "Careem", role: "Market Leader", share: "~60%", angle: "Super App Ecosystem",
+              s: ["Scale & market dominance", "Super app ecosystem", "8+ years brand heritage", "Loyalty programs"],
               w: ["Peak-time ETA delays", "Service inconsistency", "Higher cancellation rates"],
             },
             {
-              name: "Uber", role: "Challenger", share: "10%", angle: "Premium Positioning",
+              name: "Uber", role: "Challenger", share: "10–15%", angle: "Premium Positioning",
               s: ["Global brand recognition", "Premium positioning", "Airport focus", "Quality vehicles"],
               w: ["High pricing perception", "Limited local presence", "Airport focus only"],
             },
             {
-              name: "Yango", role: "Follower", share: "5%", angle: "New Entrant",
+              name: "Yango", role: "Follower", share: "5–7%", angle: "New Entrant",
               s: ["Modern app interface", "Competitive pricing", "Tech-forward features", "Young user base"],
               w: ["Limited traction", "Regulatory headwinds", "Small fleet size"],
             },
