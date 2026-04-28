@@ -25,12 +25,13 @@ function Page() {
       />
 
       {/* Slide 4 — Current Market Position */}
-      <SectionShell tone="light" slideNo={4} chapter="Context" title="Current Market Position" kicker="Bolt's position in UAE ride-hailing and the trajectory to #1 in 18 months.">
-        <div className="grid gap-6 lg:grid-cols-3">
+      <SectionShell tone="light" slideNo={4} chapter="Context" title="Current Market Position" kicker="Bolt's position in UAE ride-hailing and the trajectory to #1.">
+        <div className="grid gap-6 lg:grid-cols-4">
           {[
-            { rank: "1", brand: "Careem", share: "65%", note: "8+ years brand heritage" },
-            { rank: "2", brand: "Bolt", share: "25%", note: "Challenger · 4.2M active users", accent: true },
-            { rank: "3", brand: "Uber", share: "10%", note: "Premium positioning" },
+            { rank: "1", brand: "Careem", share: "~60%", note: "Market leader · super-app ecosystem" },
+            { rank: "2", brand: "Bolt", share: "~20%", note: "Challenger · DTC fleet · 4.2M MAU", accent: true },
+            { rank: "3", brand: "Uber", share: "10–15%", note: "Premium positioning" },
+            { rank: "4", brand: "Yango", share: "5–7%", note: "New entrant · price-led" },
           ].map((c) => (
             <PitchCard key={c.brand} accent={c.accent}>
               <div className="flex items-baseline justify-between">
@@ -46,10 +47,10 @@ function Page() {
           <StatGrid
             cols={4}
             stats={[
-              { value: "AED 2.8B", label: "Market Size" },
-              { value: "+15%", label: "YoY Growth" },
+              { value: "AED 1.25B", label: "Market Size" },
+              { value: "12–15%", label: "CAGR" },
               { value: "30%", label: "Target Share Q3 '27" },
-              { value: "50K", label: "New Users Target" },
+              { value: "50K", label: "AD Launch Installs" },
             ]}
           />
         </div>
